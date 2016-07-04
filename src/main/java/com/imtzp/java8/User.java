@@ -1,10 +1,13 @@
 package com.imtzp.java8;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 public class User {
 
     private String name;
+    
+    private BigDecimal balance;
 
     private Address address;
 
@@ -37,4 +40,14 @@ public class User {
     public boolean isLegalName(String name) {
         return name.length() > 3 && name.length() < 16;
     }
+
+	public BigDecimal getBalance() {
+		return balance;
+	}
+
+	public void setBalance(BigDecimal balance) {
+		this.balance = balance;
+	}
+    
+    
 }

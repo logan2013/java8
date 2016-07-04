@@ -1,6 +1,8 @@
 package com.imtzp.java8.stream;
 
 import java.util.List;
+import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 public class Joining {
 
@@ -21,6 +23,12 @@ public class Joining {
 	}
 
 	public static String namesToString(List<Person> people) {
-		return null;
+		
+		StringJoiner j = new StringJoiner("");
+		j.add("hello");
+		
+		j.toString();
+		
+		return people.stream().map(Person::getName).collect(Collectors.joining(",", "Names: ", "."));
 	}
 }

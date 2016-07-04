@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Grouping {
 
@@ -22,7 +23,7 @@ public class Grouping {
 	}
 
 	public static Map<String, List<Person>> groupByNationality(List<Person> people) {
-		return null;
+		return people.stream().collect(Collectors.groupingBy(p -> p.getNationality()));
 	}
 
 }
